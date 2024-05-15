@@ -8,7 +8,7 @@ variable "resource_group_name" {
   type = string   
     
    validation {
-    condition = length(var.resource_group_name) <= 10
+    condition = length(var.resource_group_name) <= 20
     error_message = "The repository name must be less than or equal to 10 characters."
   }
 }
