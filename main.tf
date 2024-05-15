@@ -13,7 +13,7 @@ resource "random_string" "myrandom" {
 
 # Create Resource Group
 resource "azurerm_resource_group" "resource_group" {
-  name     = var.resource_group_name
+  name     = format("repo-%s", var.resource_group_name)
   location = var.location
 }
 
