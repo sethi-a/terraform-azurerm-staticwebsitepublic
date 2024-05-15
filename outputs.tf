@@ -11,13 +11,13 @@ output "resource_group_location" {
   description = "resource group location"
   value       = azurerm_resource_group.resource_group.location
 }
-output "storage_account_id" {
-  description = "storage account id"
-  value       = azurerm_storage_account.storage_account.id
-}
-output "storage_account_name" {
-  description = "storage account name"
-  value       = azurerm_storage_account.storage_account.name 
-}
+#output "storage_account_id" {
+#  description = "storage account id"
+#  value       = azurerm_storage_account.storage_account.id
+#}
+#output "storage_account_name" {
+#  description = "storage account name"
+#  value       = azurerm_storage_account.storage_account.name 
+#}
 
 
