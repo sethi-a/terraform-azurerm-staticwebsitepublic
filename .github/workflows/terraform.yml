@@ -49,6 +49,12 @@ on:
     branches: [ "main" ]
   pull_request:
 
+env:
+  ARM_SUBSCRIPTION_ID: "59894f04-ee1e-4ffe-90b1-1cfdc1cde8ee"
+  ARM_TENANT_ID: "8464c737-0773-4653-900f-f415956af657"
+  ARM_CLIENT_ID: "bf7aa6ed-03fd-4903-a7d5-c8cd28ebc4f7"
+  ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+
 permissions:
   contents: read
 
