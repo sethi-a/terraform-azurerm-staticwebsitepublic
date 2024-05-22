@@ -1,5 +1,5 @@
 variables {
-  resource_group_name = "MyResours"
+  resource_group_name = "MyResoursdfgd"
 }
 
 run "test_invalid_resource_group_creation" {
