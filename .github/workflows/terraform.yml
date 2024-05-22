@@ -97,9 +97,9 @@ jobs:
     #  run: terraform apply -auto-approve -input=false
   
   release:
+    needs: terraform
     name: Release pushed tag
     runs-on: ubuntu-22.04
-    needs: terraform
     steps:
       - name: Create release
         env:
