@@ -1,6 +1,6 @@
 # Input variable definitions
 variable "location" {
-  description = "The Azure Region in which all resources groups should be created."
+  description = "The Azure Region in whpch all resources groups should be created."
   type = string 
   default = "australiaeast"
 }
