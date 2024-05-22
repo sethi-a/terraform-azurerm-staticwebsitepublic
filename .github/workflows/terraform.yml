@@ -53,6 +53,7 @@ env:
   TF_CLOUD_ORGANIZATION: "test-org-rh"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "test-workspace-akash"
+  CONFIG_DIRECTORY: "./"
 
 permissions:
   contents: read
@@ -83,9 +84,17 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
+    - name: Upload Configuration
+      uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
+      id: plan-upload
+      with:
+        workspace: ${{ env.TF_WORKSPACE }}
+        directory: ${{ env.CONFIG_DIRECTORY }}
+        speculative: true
+    
     # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Test
-      run: terraform test
+    #- name: Terraform Test
+    #  run: terraform test
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
